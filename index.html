@@ -140,21 +140,21 @@
 		</div>
 
 		<script>
-			// const panels = document.querySelectorAll(".panel");
+			const panels = document.querySelectorAll(".panel");
 
-			// function toggleOpenSide() {
-			// 	this.classList.toggle("open");
-			// }
+			function toggleOpenSide() {
+				this.classList.toggle("open");
+			}
 
-			// function toggleOpenVertically(e) {
-			// 	if (e.propertyName.includes("flex")) {
-			// 		this.classList.toggle("open-active");
-			// 	}
-			// }
-			// panels.forEach((el) => el.addEventListener("click", toggleOpenSide));
-			// panels.forEach((el) =>
-			// 	el.addEventListener("transitionend", toggleOpenVertically)
-			// );
+			function toggleOpenVertically(e) {
+				if (e.propertyName.includes("flex")) {
+					this.classList.toggle("open-active");
+				}
+			}
+			panels.forEach((el) => el.addEventListener("click", toggleOpenSide));
+			panels.forEach((el) =>
+				el.addEventListener("transitionend", toggleOpenVertically)
+			);
 		</script>
 	</body>
 </html>
